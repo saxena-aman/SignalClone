@@ -3,7 +3,7 @@ import { Text, StyleSheet, View, FlatList} from 'react-native';
 import ChatRoomItem from '../components/ChatRoomItem';
 import ChatRoomsData from '../assets/dummy-data/ChatRooms';
 
-export default function TabOneScreen(){
+export default function HomeScreen(){
   
   return(
     <View style={styles.page}>
