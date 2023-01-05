@@ -3,6 +3,7 @@ import { Text, StyleSheet, View, FlatList, Pressable} from 'react-native';
 import ChatRoomItem from '../components/ChatRoomItem';
 import ChatRoomsData from '../assets/dummy-data/ChatRooms';
 import {
+  Authenticator,
   useAuthenticator,
   withAuthenticator,
 } from '@aws-amplify/ui-react-native';
