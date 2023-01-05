@@ -4,8 +4,16 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
+import config from './src/aws-exports'
+import {Amplify} from 'aws-amplify';
+import {
+  useAuthenticator,
+  withAuthenticator,
+} from '@aws-amplify/ui-react-native';
 
-export default function App() {
+Amplify.configure(config);
+
+function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
 
@@ -20,3 +28,5 @@ export default function App() {
     );
   }
 }
+
+export default withAuthenticator(App);
